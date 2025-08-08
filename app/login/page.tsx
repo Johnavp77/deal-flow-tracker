@@ -17,7 +17,3 @@ export default function Login() {
   providers={['github']}
 />
          </div>
-   
-  
-  );
-}
