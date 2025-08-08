@@ -11,10 +11,12 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 export default function Login() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
- <     AAuth       supabaseClient={supabase}
+         <Auth
+        supabaseClient={supabase}
         appearance={{ theme: ThemeSupa }}
         providers={['github']}
-      />      />
+         />
+   
    
    
   );
