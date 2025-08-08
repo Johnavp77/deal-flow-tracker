@@ -12,8 +12,8 @@ export default function Login() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
 <Auth
-supabaseClient={supabase}
-appearance=operator.chatgpt.com/c/68965d14d0788190aabdd058e7361fe0#cua_citation-%20{{theme:%20{ThemeSupa}%20
-providers={['github']}
+  supabaseClient={supabase}
+  appearance=https://operator.chatgpt.com/c/68965d14d0788190aabdd058e7361fe0#cua_citation-%20{{theme:%20{ThemeSupa}%20
+  providers={['github']}
 />
 </div>
