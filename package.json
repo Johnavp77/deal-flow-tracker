@@ -9,9 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-npm install @supabase/auth-helpers-nextjs \
-            @supabase/auth-ui-react \
-            @supabase/auth-ui-shared
+git add package.json package-lock.json
+git commit -m "Add Supabase auth helper & UI packages"
+git push origin main
     "@supabase/supabase-js": "^2.39.5",
     "next": "14.0.4",
     "react": "18.2.0",
