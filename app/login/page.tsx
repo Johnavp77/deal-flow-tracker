@@ -7,12 +7,12 @@ const supabase = createClientComponentClient();
 export default function Login() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
-    <Auth
-      supabaseClient={supabase}
-      appearance=https://operator.chatgpt.com/c/689a40675c108191bd2afe025c1adfbd#cua_citation-%20theme:%20ThemeSupa%20
-      providers={['github']}
-      magicLink={false}
-    />
+<Auth
+  supabaseClient={supabase}
+  appearance=https://operator.chatgpt.com/c/689a40675c108191bd2afe025c1adfbd#cua_citation-%20theme:%20ThemeSupa%20
+  providers={['github']}
+  magicLink={false}
+/>
       <p className="mt-4 text-sm text-center text-gray-500">
         Sign up with your email and password, or continue with GitHub.
       </p>
