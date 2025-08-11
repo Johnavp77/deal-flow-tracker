@@ -9,7 +9,7 @@ export default function Login() {
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
 <Auth
   supabaseClient={supabase}
-  appearance=https://operator.chatgpt.com/c/689a40675c108191bd2afe025c1adfbd#cua_citation-%20theme:%20ThemeSupa%20
+  appearance={theme:ThemeSupa}
   providers={['github']}
   magicLink={false}
 />
