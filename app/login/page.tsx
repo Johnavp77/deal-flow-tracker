@@ -9,6 +9,8 @@ export default function Login() {
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
       <Auth
         supabaseClient={supabase}
+        @supabase/auth-helpers-nextjs
+        @supabase/auth-ui-shared
         appearance={{ theme:ThemeSupa }}
         providers={['github']}
         magicLink={false}
