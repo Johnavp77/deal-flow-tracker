@@ -9,7 +9,7 @@ export default function Login() {
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
 <Auth
   supabaseClient={supabase}
-  appearance={theme:ThemeSupa}
+  appearance={{ theme: ThemeSupa}}
   providers={['github']}
   magicLink={false}
 />
