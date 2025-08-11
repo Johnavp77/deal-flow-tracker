@@ -1,19 +1,17 @@
-'use client';
-
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
 import { Auth } from '@supabase/auth-ui-react';
-import { ThemeSupa } from '@supabase/auth-ui-react';
-import { createClient } from '@supabase/supabase-js';
+import { ThemeSupa } from '@supabase/auth-ui-shared';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL as string;
-const supabaseKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string;
-const supabase = createClient(supabaseUrl, supabaseKey);
+const supabase = createClientComponentClient();
 
 export default function Login() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
-<Auth
-  supabaseClient={supabase}
-  appearance=https://operator.chatgpt.com/c/68965d14d0788190aabdd058e7361fe0#cua_citation-%20{{theme:%20{ThemeSupa}%20
-  providers={['github']}
-/>
-</div>
+      <Auth
+        supabaseClient={supabase}
+        appearance=https://operator.chatgpt.com/c/689a40675c108191bd2afe025c1adfbd#cua_citation-%20theme:%20ThemeSupa%20
+        providers={['github']}
+      />
+    </div>
+  );
+}
