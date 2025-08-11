@@ -19,6 +19,3 @@ export default function Login() {
     </div>
   );
 }
-git add app/login/page.tsx
-git commit -m "Fix appearance line (double braces)"
-git push origin main
