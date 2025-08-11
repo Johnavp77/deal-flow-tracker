@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    # In your project folder
 npm install @supabase/auth-helpers-nextjs \
             @supabase/auth-ui-react \
             @supabase/auth-ui-shared
