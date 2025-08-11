@@ -11,7 +11,7 @@ export default function Login() {
         supabaseClient={supabase}
         appearance=https://operator.chatgpt.com/c/689a40675c108191bd2afe025c1adfbd#cua_citation-%20theme:%20ThemeSupa%20
         providers={['github']}
-        magicLink={false}               // ← NEW: classic email + password only
+        magicLink={false}
       />
       <p className="mt-4 text-sm text-center text-gray-500">
         Sign up with your email and password, or continue with GitHub.
