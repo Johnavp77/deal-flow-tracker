@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@supabase/auth-helpers-nextjs": "^0.6.1",
-   @ "supabase/auth-ui-react": "
-  "@supabase/auth-ui-shared": "^0.2.7",,
-    @@supabase/supabase-js": "^2.39.7",
+   "@supabase/auth-helpers-nextjs": "^0.6.1",
+   @ ""supabase/auth-ui-react": "
+  "@"spabase/auth-ui-shared": "^0.2.7",,
+  "@upabase/supabase-js": "^2.39.7",
     "@react-google-maps/api": "^2.19.1",
     "file-saver": "^2.0.3",
     "next": "14.0.4",
