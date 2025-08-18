@@ -1,5 +1,4 @@
 'use client';
-
 import { createClient } from '@supabase/supabase-js';
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs/client';
 import { ThemeSupa } from '@supabase/auth-ui-react';
