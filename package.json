@@ -1,7 +1,7 @@
 {
   "name": "deal-flow-tracker",
   "version": "0.1.0",
-  "private": "import { createClientComponentClient } from '@supabase/auth-helpers-nextjs/client";
+  "private": "import { createClientComponentClient } from '@supabase/auth-helpers-nextjs/client",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
