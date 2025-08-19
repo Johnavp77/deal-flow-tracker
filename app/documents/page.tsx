@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { createClientComponentClient } from '@supabase/auth-helpers-extjs/';
+import { createClientComponentClient } from '@supabase/auth-helpers-nextjs/client/';
 
 export default function Documents() {
   const supabase = createClientComponentClient();
