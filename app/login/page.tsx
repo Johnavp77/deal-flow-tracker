@@ -1,8 +1,8 @@
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs/client
+import { createBrowserClient } from "@supabase/ssr";
 import { Auth } from '@supabase/auth-ui-react';
 import { ThemeSupa } from '@supabase/auth-ui-react';
 
-const supabase = createClientComponentClient();
+const supabase = createBrowserClient();
 
 export default function Login() {
   return (

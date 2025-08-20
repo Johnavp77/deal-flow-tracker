@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { createBrowserClient } from "@supabase/auth-helpers-nextjs/client";
+import { createBrowserClient } from "@supabase/ssr";
 
 interface Deal {
   id: string;
@@ -18,7 +18,7 @@ interface Activity {
 }
 
 export default function Dashboard() {
-  const supabase = createClientComponentClient();
+  const supabase = createBrowserClient();
   const [totalDeals, setTotalDeals] = useState(0);
   const [totalValue, setTotalValue] = useState(0);
   const [dealsPerStage, setDealsPerStage] = useState<Record<string, number>>({});

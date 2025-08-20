@@ -1,10 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { createBrowserClient } from '@supabase/auth-helpers-nextjs/client';
-
+import { createBrowserClient } from "@supabase/ssr";
+createClientComponentClient
 export default function Documents() {
-  const supabase = createClientComponentClient();
+  const supabase = createBrowserClient();
   const [files, setFiles] = useState<any[]>([]);
   const [uploading, setUploading] = useState(false);
 
