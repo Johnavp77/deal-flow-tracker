@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs/client";
+import { createBrowserClient } from "@supabase/auth-helpers-nextjs/client";
 
 interface Deal {
   id: string;
