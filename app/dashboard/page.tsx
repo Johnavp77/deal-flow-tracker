@@ -27,14 +27,17 @@ export default function Dashboard() {
 
   useEffect(() => {
     const fetchStats = async () => {
+      // Fetch deals
       const { data: deals } = await supabase
         .from<Deal>("deals")
         .select("id, amount, stage_id, created_at");
 
       if (deals) {
+        // Totals
         setTotalDeals(deals.length);
         setTotalValue(deals.reduce((sum, d) => sum + (d.amount ?? 0), 0));
 
+        // Deals per stage
         const stageCounts: Record<string, number> = {};
         deals.forEach((d) => {
           const stage = d.stage_id ?? "Unassigned";
@@ -42,6 +45,7 @@ export default function Dashboard() {
         });
         setDealsPerStage(stageCounts);
 
+        // Average time in stage (days)
         const now = Date.now();
         const totalDays = deals.reduce((sum, d) => {
           if (!d.created_at) return sum;
@@ -50,6 +54,7 @@ export default function Dashboard() {
         setAvgTimeInStage(deals.length ? totalDays / deals.length : 0);
       }
 
+      // Recent activity (last 5)
       const { data: activities } = await supabase
         .from<Activity>("deal_activities")
         .select("*")
@@ -66,6 +71,7 @@ export default function Dashboard() {
     <main className="p-8 space-y-8">
       <h1 className="text-2xl font-bold">Dashboard</h1>
 
+      {/* KPI Cards */}
       <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
         <div className="rounded-lg bg-white p-6 shadow">
           <h2 className="text-sm font-medium text-gray-500">Total Deals</h2>
@@ -78,13 +84,16 @@ export default function Dashboard() {
           </p>
         </div>
         <div className="rounded-lg bg-white p-6 shadow">
-          <h2 className="text-sm font-medium text-gray-500">Avg. Days in Stage</h2>
+          <h2 className="text-sm font-medium text-gray-500">
+            Avg. Days in Stage
+          </h2>
           <p className="mt-2 text-3xl font-semibold">
             {avgTimeInStage.toFixed(1)}
           </p>
         </div>
       </div>
 
+      {/* Deals per Stage */}
       <section>
         <h2 className="mb-4 text-lg font-semibold">Deals per Stage</h2>
         <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
@@ -103,6 +112,7 @@ export default function Dashboard() {
         </ul>
       </section>
 
+      {/* Recent Activity */}
       <section>
         <h2 className="mb-4 text-lg font-semibold">Recent Activity</h2>
         <ul className="space-y-3">
